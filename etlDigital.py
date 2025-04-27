@@ -5,7 +5,7 @@ from digitalDag.credentials import credentialBq
 
 
 def extract():
-    df_customer = pd.read_csv('/home/rosaihzaa/airflow/data/digital_customer.csv')
+    df_customer = pd.read_csv('digital_customer.csv')
     return df_customer
 
 def transform():
@@ -61,9 +61,9 @@ def load():
     data_digital = transform()
     # Ganti nama kolom dengan karakter yang valid di BigQuery
     data_digital.columns = data_digital.columns.str.replace(r'[^\w]', '_', regex=True)
-    project_id = 'bank-marketing-project-446413'
-    dataset_id = 'digitalInterest'
-    table_id = 'digitals'
+    project_id = 'yourprojectid'
+    dataset_id = 'yourdatasetid'
+    table_id = 'yourtableid'
     
     client = bigquery.Client(project=project_id, credentials=credentialBq())
     table_ref = f'{project_id}.{dataset_id}.{table_id}'
@@ -79,7 +79,7 @@ def confidence_interval():
     ci = """SELECT 
             AVG(`Skor_Minat_Digital`) - 1.96 * STDDEV_POP(`Skor_Minat_Digital`) / SQRT(COUNT(*)) AS ci_lower,
             AVG(`Skor_Minat_Digital`) + 1.96 * STDDEV_POP(`Skor_Minat_Digital`) / SQRT(COUNT(*)) AS ci_upper
-            FROM bank-marketing-project-446413.digitalInterest.digitals;
+            FROM yourprojectid-datasetid-tableid; 
             """
     return ci
 
