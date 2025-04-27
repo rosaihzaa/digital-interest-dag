@@ -1,4 +1,4 @@
 # 🕹️ Digital Interest DAG
 
 ## Workflow
-[!Image](
+![Image](ETLDigital.jpg)
