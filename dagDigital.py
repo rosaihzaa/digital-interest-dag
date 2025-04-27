@@ -7,7 +7,7 @@ from datetime import timedelta, datetime
 
 
 default_args = {
-    'owner' : 'Rosa',
+    'owner' : 'yourname',
     'retries' : 1,
     'retry_delay' : timedelta(minutes=2)
 }
@@ -40,15 +40,15 @@ with DAG(
                         'query':confidence_interval(),
                         'useLegacySql':False,
                         'destinationTable': {
-                            'projectId':'bank-marketing-project-446413',
-                            'datasetId': 'digitalInterest',
-                            'tableId': 'ci-output'
+                            'projectId':'yourprojectid',
+                            'datasetId': 'yourdatasetid',
+                            'tableId': 'yourtableid-output'
                         },
                     'write_disposition':'WRITE_TRUNCATE',
                     }
             },
             location='US',
-            project_id='bank-marketing-project-446413'
+            project_id='yourprojectid'
             )
         
     
