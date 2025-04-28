@@ -127,7 +127,7 @@ Hasil dashboard dipaparkan menggunakan presentasi yang visual dan interaktif, da
   ```
   **Install Apache Airflow:**
   ```bash
-  pip instll apache-airflow
+  pip install apache-airflow
   ```
   **Initialize Airflow Database:**
   ```bash
