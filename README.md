@@ -7,7 +7,7 @@
 `extract` >> `transform` >> `load` >> `confidence interval`
 
 ### 🖇️ Extract
-Tugas `extract` dalam workflow ini adalah untuk membaca file digital_customer.csv. Data tersebut terdiri dari 18 kolom dan 300 baris. Kolom tersebut Nama Lokasi,	Jam Login,	Nama,	Email,	No Telpon,	Tahun Lahir,	Merek HP,	Minat Digital, dan	Tipe Lokasi.
+Tugas `extract` dalam workflow ini adalah untuk membaca file digital_customer.csv. Data tersebut terdiri dari 9 kolom dan 300 baris. Kolom tersebut Nama Lokasi,	Jam Login,	Nama,	Email,	No Telpon,	Tahun Lahir,	Merek HP,	Minat Digital, dan	Tipe Lokasi.
 
 ### 🖇️ Transform
 Tugas `extract` dalam workflow ini adalah untuk mengubah kolom sebelumnya menjadi kolom-kolom baru, guna mempermudah analisis selanjutnya. Kolom data tersebut dijelaskan sebagai berikut:
